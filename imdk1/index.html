@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Online Celana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Amd's Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#products">Produk</a></li>
+                <li><a href="#cart">Keranjang (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="products" class="hidden">
+            <h2>Produk Kami</h2>
+            <div class="product-grid">
+                <!-- Produk akan dimuat melalui JavaScript -->
+            </div>
+        </section>
+
+        <section id="cart" class="hidden">
+            <h2>Keranjang Belanja</h2>
+            <div class="cart-items">
+                <!-- Item keranjang akan dimuat melalui JavaScript -->
+            </div>
+            <div class="cart-summary">
+                <p>Total: Rp <span id="cart-total">0</span></p>
+                <button id="checkout-btn">Checkout</button>
+            </div>
+        </section>
+
+        <section id="checkout-form" class="hidden">
+            <h2>Formulir Checkout</h2>
+            <form id="checkoutForm">
+                <div class="form-group">
+                    <label for="name">Nama Lengkap:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Alamat Pengiriman:</label>
+                    <textarea id="address" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="payment">Metode Pembayaran:</label>
+                    <select id="payment" required>
+                        <option value="">Pilih metode</option>
+                        <option value="transfer">Transfer Bank</option>
+                        <option value="cod">COD (Bayar di Tempat)</option>
+                        <option value="e-wallet">E-Wallet</option>
+                    </select>
+                </div>
+                <button type="submit">Proses Pembayaran</button>
+            </form>
+        </section>
+
+        <section id="thank-you" class="hidden">
+            <h2>Terima Kasih atas Pembelian Anda!</h2>
+            <p>Pesanan Anda telah diterima dan akan segera kami proses.</p>
+            <button id="back-to-shop">Kembali Berbelanja</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Amd's Store. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
